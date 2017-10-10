@@ -7,7 +7,7 @@
     <meta name="author" content="Dashboard">
     <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
 
-    <title>DASHGUM - FREE Bootstrap Admin Template</title>
+    <title>CRM系统</title>
 
     <!-- Bootstrap core CSS -->
     <link href="/assets/css/bootstrap.css" rel="stylesheet">
@@ -43,7 +43,7 @@
       <!--main content start-->
       <section id="main-content">
           <section class="wrapper">
-
+            @yield('content')
               <div class="row">
                   <div class="col-lg-9 main-chart">
 
@@ -71,11 +71,13 @@
 
     <!--common script for all pages-->
     <script src="/assets/js/common-scripts.js"></script>
+
     <script type="text/javascript" src="/assets/js/gritter/js/jquery.gritter.js"></script>
     <script type="text/javascript" src="/assets/js/gritter-conf.js"></script>
 
     <!--script for this page-->
-
+    <script src="/assets/js/sparkline-chart.js"></script>
+	<script src="/assets/js/zabuto_calendar.js"></script>
 
 	<script type="text/javascript">
       /*  $(document).ready(function () {
