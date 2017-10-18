@@ -12,7 +12,11 @@ TOP BAR CONTENT & NOTIFICATIONS
       <!--艾特include('layouts.notify')-->
       <div class="top-menu">
         <ul class="nav pull-right top-menu">
-              <li><a class="logout" href="/login">登出系统</a></li>
+              <li><form action="/logout" method="POST">
+                {{ csrf_field() }}
+                {{ method_field('DELETE') }}
+                <button class="btn btn-theme btn-block " type="submit" name="button">退出登录</button>
+              </form></li>
         </ul>
       </div>
   </header>

@@ -7,10 +7,10 @@ MAIN SIDEBAR MENU
         <!-- sidebar menu start-->
         <ul class="sidebar-menu" id="nav-accordion">
 
-            <h5 class="centered">你的名字</h5>
+            <h5 class="centered">{{ Auth::user()->name }}</h5>
 
             <li class="mt">
-                <a class="active" href="/">
+                <a class="active" href="/index">
                     <i class="fa fa-dashboard"></i>
                     <span>我的首页</span>
                 </a>
@@ -43,8 +43,8 @@ MAIN SIDEBAR MENU
                     <span>员工管理</span>
                 </a>
                 <ul class="sub">
-                    <li><a  href="#">员工列表</a></li>
-                    <li><a  href="#">创建员工</a></li>
+                    <li><a  href="/user">员工列表</a></li>
+                    <li><a  href="/user/create">创建员工</a></li>
                 </ul>
             </li>
             <li class="sub-menu">

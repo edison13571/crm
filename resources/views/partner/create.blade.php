@@ -52,13 +52,13 @@
                   <label class="col-sm-1 col-sm-1 control-label">备注</label>
                   <div class="col-sm-4">
                     <textarea name="remark" class="form-control"value="{{ old('remark') }}"></textarea>
-                      
+
                   </div>
               </div>
 
 
               <button type="submit" class="btn btn-theme02"><i class="fa fa-check"></i> 创建</button>
-              <button type="button" class="btn btn-theme04"><i class="fa fa-heart"></i> 返回</button>
+              <a href="/customer/create"><button type="button" class="btn btn-theme04"><i class="fa fa-heart"></i> 返回</button>
           </form>
       </div>
   </div><!-- col-lg-12-->

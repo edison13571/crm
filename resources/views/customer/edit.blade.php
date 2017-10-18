@@ -3,7 +3,7 @@
 <div class="row mt">
   <div class="col-lg-12">
       <div class="form-panel">
-          <h4 class="mb"><i class="fa fa-angle-right"></i> 创建客户</h4>
+          <h4 class="mb"><i class="fa fa-angle-right"></i> 修改客户</h4>
           <form class="form-horizontal style-form" method="POST" action="{{ route('customer.update',$customer->id)}}">
               {{ method_field('PATCH')}}
               {{ csrf_field() }}

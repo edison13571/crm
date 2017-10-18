@@ -12,49 +12,59 @@
                       <input class="form-control" id="disabledInput" type="text" placeholder="系统自动生成" disabled>
                   </div>
 
-                  <label class="col-sm-1 col-sm-1 control-label">客户姓名</label>
+                  <label class="col-sm-1 col-sm-1 control-label">来源渠道</label>
                   <div class="col-sm-4">
-                      <input type="text" class="form-control" placeholder="请输入客户姓名"name="name" value="{{ old('name') }}">
+                    <select class="form-control"name="partner" value="{{ old('partner') }}">
+                      <option>请选择来源渠道</option>
+                      @foreach ($partners as $partner)
+                        <option>{{$partner->name}}</option>
+                      @endforeach
+                    </select>
                   </div>
+
+                  <a href="/partner/create"><button type="button"class="btn btn-theme" >创建渠道</button></a>
+
               </div>
 
               <div class="form-group">
+                <label class="col-sm-1 col-sm-1 control-label">客户姓名</label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" placeholder="请输入客户姓名"name="name" value="{{ old('name') }}">
+                </div>
+
                   <label class="col-sm-1 col-sm-1 control-label">英文名/昵称</label>
                   <div class="col-sm-4">
                       <input type="text" class="form-control" placeholder="请输入英文名/昵称"name="en_name" value="{{ old('en_name') }}">
                   </div>
 
-                  <label class="col-sm-1 col-sm-1 control-label">客户性别</label>
-                  <div class="col-sm-4">
-                    <select class="form-control"name="sex" value="{{ old('sex') }}">
-                      <option>暂无</option>
-                      <option>男</option>
-                      <option>女</option>
-                    </select>
-                  </div>
               </div>
 
               <div class="form-group">
+
+                <label class="col-sm-1 col-sm-1 control-label">客户性别</label>
+                <div class="col-sm-4">
+                  <select class="form-control"name="sex" value="{{ old('sex') }}">
+                    <option>女</option>
+                    <option>男</option>
+                  </select>
+                </div>
+
                   <label class="col-sm-1 col-sm-1 control-label">身份证</label>
                   <div class="col-sm-4">
                       <input type="text" class="form-control" placeholder="请输入身份证"name="id_number" value="{{ old('id_number') }}">
                   </div>
 
-                  <label class="col-sm-1 col-sm-1 control-label">出生年月</label>
-                  <div class="col-sm-4">
-                      <input type="text" class="form-control" placeholder="请输入出生年月"name="birthday" value="{{ old('birthday') }}">
-                  </div>
               </div>
 
               <div class="form-group">
+                <label class="col-sm-1 col-sm-1 control-label">出生年月</label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" placeholder="请输入出生年月"name="birthday" value="{{ old('birthday') }}">
+                </div>
+
                   <label class="col-sm-1 col-sm-1 control-label">目前所在学校</label>
                   <div class="col-sm-4">
                       <input type="text" class="form-control" placeholder="请输入目前所在学校"name="school" value="{{ old('school') }}">
-                  </div>
-
-                  <label class="col-sm-1 col-sm-1 control-label">年级</label>
-                  <div class="col-sm-4">
-                      <input type="text" class="form-control" placeholder="请输入年级"name="grade" value="{{ old('grade') }}">
                   </div>
               </div>
 
@@ -88,18 +98,10 @@
                     <input type="text" class="form-control" placeholder="请输入意向状态"name="status_intention" value="{{ old('status_intention') }}">
                 </div>
 
-                  <label class="col-sm-1 col-sm-1 control-label">来源渠道</label>
-                  <div class="col-sm-4">
-                    <select class="form-control"name="partner" value="{{ old('partner') }}">
-                      <option>请选择来源渠道</option>
-                      @foreach ($partners as $partner)
-                        <option>{{$partner->name}}</option>
-                      @endforeach
-                    </select>
-                  </div>
-
-                  <a href="/partner/create"><button class="btn btn-theme" >创建渠道</butto></a>
-
+                <label class="col-sm-1 col-sm-1 control-label">年级</label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" placeholder="请输入年级"name="grade" value="{{ old('grade') }}">
+                </div>
               </div>
 
               <div class="form-group">

@@ -43,6 +43,7 @@
       <!--main content start-->
       <section id="main-content">
           <section class="wrapper">
+            @include('shared.messages')
             @yield('content')
               <div class="row">
                   <div class="col-lg-9 main-chart">

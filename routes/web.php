@@ -12,8 +12,16 @@
 */
 
 Route::get('/', function () {
+    return view('login');
+});
+Route::get('index', function () {
     return view('welcome');
 });
 
 Route::resource('customer', 'CustomersController');
 Route::resource('partner', 'PartnersController');
+Route::resource('user', 'UsersController');
+
+Route::get('login', 'SessionsController@create');
+Route::post('login', 'SessionsController@store');
+Route::delete('logout', 'SessionsController@destroy');
