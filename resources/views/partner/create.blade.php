@@ -4,6 +4,7 @@
   <div class="col-lg-12">
       <div class="form-panel">
           <h4 class="mb"><i class="fa fa-angle-right"></i> 创建渠道</h4>
+          @include('shared.errors')
           <form class="form-horizontal style-form" method="POST"action="/partner">
             {{ csrf_field() }}
               <div class="form-group">
